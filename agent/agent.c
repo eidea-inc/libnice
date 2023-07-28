@@ -3680,7 +3680,7 @@ nice_agent_gather_candidates (
 
   /* if no local addresses added, generate them ourselves */
   if (agent->local_addresses == NULL) {
-    GList *addresses = nice_interfaces_get_local_ips (FALSE);
+    GList *addresses = nice_interfaces_get_local_ips (TRUE);
     GList *item;
 
     for (item = addresses; item; item = g_list_next (item)) {
